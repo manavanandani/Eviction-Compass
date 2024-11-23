@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  apache-airflow:
+    image: apache/airflow:latest
+    volumes:
+      - ./airflow:/opt/airflow
+    ports:
+      - "8080:8080"
+
+    command: airflow standalone
